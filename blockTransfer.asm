@@ -1,4 +1,4 @@
-;Block transfer overlapped and non overlapped
+;Block transfer overlapped(positive and negative) and non overlapped with and without using string instructions
 
 section .data
 	msg1 db 10,'Enter a choice', 10
@@ -262,7 +262,7 @@ dispdest:
 	mov edi, destn
 	loop3:
 	mov bl,[edi]
-	mov byte [digit_cnt], 2	;displaying 4 digits
+	mov byte [digit_cnt], 2		;displaying 4 digits
 	mov esi,temp			;variable temp moved to edi
 	loop4:
 		rol  bl, 4		;1 hex bit=4 binary bits (1 hex bit rotated)
